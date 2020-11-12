@@ -1,0 +1,26 @@
+
+<div class="container d-flex justify-content-center flex-column h-100">
+<h1>Editing cocktail</h1>
+
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Submit", class: "button is-rounded" %>
+<% end %>
+<%#= render 'form', cocktail: @cocktail %>
+
+<!-- <p> <#%= link_to "Back to cocktails", cocktails_path  </p> -->
+</div>
+
+<!-- style button  -->
+<!--
+<a href="#/" class="btn">
+<span>Button</span>
+  <svg width="400" height="130" viewBox="
+  0 0 400 120" xmlns="
+  http://www.w3.org/2000/svg">
+  <rect class="line1" x="10" y="4" width="
+  379" height="112" rx="59.5" />
+  <rect class="line2" x="10" y="4" width="
+  379" height="112" rx="59.5" />
+  </svg>
+</a> -->

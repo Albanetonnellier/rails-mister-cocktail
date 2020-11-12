@@ -1,0 +1,13 @@
+<div class="container">
+
+<% @cocktails.each do |cocktail| %>
+<div class="card">
+  <div class="card-content">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+      <p><%= link_to 'Edit', edit_cocktail_path(cocktail) %></p>
+      <p><%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+
+</div>
+ <% end %>
+</div>

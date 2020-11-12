@@ -1,0 +1,64 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   background: #111111;
+// }
+
+// .btn {
+//   transform: scale(0.8);
+//   color: purple;
+//   cursor: pointer;
+//   top: 50%;
+//   left: 50%;
+//   position: absolute;
+//   transform: translate(-50%, -50%);
+//   text-decoration: none;
+//   font-weight: 500;
+//   font-size: 2em;
+// }
+
+// .btn span {
+//   position: absolute;
+//   width: 100%;
+//   text-align: center;
+//   text-transform: uppercase;
+//   height: 100%;
+//   margin: 45px 0 2px 25px;
+//   max-width: 350px;
+//   max-height: 90px;
+//   border-radius: 50em;
+// }
+
+// .btn .line1 {
+//   fill: none;
+//   stroke: purple;
+//   stroke-width: 1;
+// }
+
+// .btn .line2 {
+//   fill: none;
+//   stroke: purple;
+//   stroke-linecap: round;
+//   stroke-width: 15;
+//   stroke-dasharray: 230;
+//   stroke-dashoffset: -345;
+//   transition: 0.5s all cubic-bezier(
+//     0.23, 1, 0.32, 1.2);
+// }
+
+// .btn:hover .line2 {
+//   stroke-dashoffset: -580;
+// }
+
+// .btn,
+// .btn>*,
+// .btn>*>* {
+//   transition: all 0.4s ease-out;
+// }
+
+
+

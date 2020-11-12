@@ -1,0 +1,19 @@
+<div id="container-ingredients">
+    <div class="ingredients">
+            <h1><%= @cocktail.name %></h1>
+            <br>
+            <br>
+            <h2>Ingredients and description</h2>
+            <br>
+            <% @cocktail.doses.each do |dose| %>
+            <p class="list"> <%= dose.ingredient.name %> | <%= dose.description %> <%= link_to '', dose_path(dose), :class =>"fa fa-trash destroy_dose", method: :delete, data: { confirm: 'Are you sure?' } %>  </p>
+            <br>
+            <% end %>
+
+            <a id="add-ingredient"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), :class =>"button is-rounded", :id=>"add-ingredient" %></a>
+
+            <br>
+            <br>
+
+    </div>
+</div>

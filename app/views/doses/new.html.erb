@@ -1,0 +1,9 @@
+<div class="container d-flex justify-content-center flex-column h-100">
+  <h1>Add a new ingredient to <%= @cocktail.name %></h1>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit "Save", class: "button is-rounded" %>
+  <% end %>
+</div>
