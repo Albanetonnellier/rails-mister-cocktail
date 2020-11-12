@@ -1,13 +1,20 @@
-<div class="container">
-
-<% @cocktails.each do |cocktail| %>
-<div class="card">
-  <div class="card-content">
-      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-      <p><%= link_to 'Edit', edit_cocktail_path(cocktail) %></p>
-      <p><%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <div class="banner-content">
+    <h1>Cocktail bar</h1>
+    <p>The place to create your cocktails</p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
   </div>
-
 </div>
- <% end %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
+          <div class="card-description">
+            <h2><%= cocktail.name %></h2>
+          </div>
+          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,19 +1,31 @@
-<div id="container-ingredients">
-    <div class="ingredients">
-            <h1><%= @cocktail.name %></h1>
-            <br>
-            <br>
-            <h2>Ingredients and description</h2>
-            <br>
-            <% @cocktail.doses.each do |dose| %>
-            <p class="list"> <%= dose.ingredient.name %> | <%= dose.description %> <%= link_to '', dose_path(dose), :class =>"fa fa-trash destroy_dose", method: :delete, data: { confirm: 'Are you sure?' } %>  </p>
-            <br>
-            <% end %>
+<div class="container">
 
-            <a id="add-ingredient"><%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), :class =>"button is-rounded", :id=>"add-ingredient" %></a>
+  <h1><%= @cocktail.name %></h1>
+  <%= link_to "Back to all cocktails", root_path %>
 
-            <br>
-            <br>
-
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h3>Recipe</h3>
+      <table class="table table-bordered">
+        <tbody>
+          <thead>
+            <th>Ingredient</th>
+            <th>Description</th>
+            <th>Action</th>
+          </thead>
+          <% @cocktail.doses.each do |dose| %>
+            <tr>
+              <td><%= dose.ingredient.name %></td>
+              <td><%= dose.description %></td>
+              <td>
+                <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash destroy_dose"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
