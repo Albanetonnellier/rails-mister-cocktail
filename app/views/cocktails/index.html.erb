@@ -1,20 +1,24 @@
-  <div class="banner-content">
-    <h1>Cocktail bar</h1>
-    <p>The place to create your cocktails</p>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+<div class="banner">
+    <div class="container">
+      <h1 class="text-left">Cocktails</h1>
+      <p> All your favourite cocktails</p>
+
+      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-outline-dark" %>
+    </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-          </div>
-          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
-        </div>
+
+
+  <div class="container">
+    <h2 class="text-center">Your cocktails</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="images/apply.svg" alt="">
+        <% @cocktails.each do |cocktail| %>
+          <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
+          <p><%= cocktail.name %></p>
+          <% end %>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
